@@ -201,11 +201,9 @@ Before starting, make sure you have:
 
 Step 1: Clone the Repository
 
-git clone https://github.com/YOUR-USERNAME/Drishti-AI.git
+git clone https://github.com/hitika567-oss/drishti
 
 cd Drishti-AI
-
-Replace "YOUR-USERNAME" with your GitHub username.
 
 Step 2: Install Ollama
 
@@ -243,14 +241,6 @@ Step 5: Start the Backend
 
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 
-API documentation:
-
-"http://127.0.0.1:8000/docs" (http://127.0.0.1:8000/docs)
-
-Backend health check:
-
-"http://127.0.0.1:8000/health" (http://127.0.0.1:8000/health)
-
 Step 6: Run the Android Application
 
 1. Open the "android/DrishtiApp" folder in Android Studio.
@@ -260,43 +250,11 @@ Step 6: Run the Android Application
 5. Make sure both devices are connected to the same local network.
 6. Run the application.
 
-Important: Do not use "127.0.0.1" as the backend address inside the Android application. That address refers to the smartphone itself. Use your laptop's local IPv4 address instead.
-
-🔌 API Documentation
-
-The backend currently exposes the following initial endpoints.
-
-Endpoint| Method| Description
-"/health"| GET| Checks backend availability
-"/vision/describe"| POST| Analyses an uploaded image
-
-Image Description API
-
-Endpoint:
-
-POST /vision/describe
-
 Request parameters:
 
 Parameter| Type| Description
 image| File| Uploaded JPEG, PNG or WebP image
 language| String| Desired response language
-
-Example request:
-
-curl -X POST \
-"http://127.0.0.1:8000/vision/describe?language=English" \
--F "image=@test.jpg"
-
-Example response:
-
-{
-  "success": true,
-  "description": "A table is visible in front of you.",
-  "language": "English"
-}
-
-Additional endpoints for object finding, OCR and conversational interaction are planned.
 
 🔐 Privacy and Security
 
@@ -323,35 +281,12 @@ Drishti aims to follow accessibility-first design principles.
 - Multilingual interaction.
 - Clear feedback when the AI cannot identify something.
 
-🚀 Development Roadmap
-
-- [x] Project concept and architecture.
-- [x] Technology stack selection.
-- [x] Initial FastAPI backend design.
-- [x] Initial Android camera integration design.
-- [ ] Complete Android and backend integration.
-- [ ] AI-powered scene description.
-- [ ] Automatic text-to-speech responses.
-- [ ] Voice command integration.
-- [ ] OCR-based text reader.
-- [ ] Context-aware conversations.
-- [ ] Object-finding functionality.
-- [ ] Hindi language support.
-- [ ] Additional regional languages.
-- [ ] Accessibility and TalkBack testing.
-- [ ] Safety and reliability evaluation.
-- [ ] On-device AI deployment exploration.
-
-Roadmap checkboxes should be updated as features are implemented and tested.
-
 👥 Team Members
 
-Member| Responsibility
-Member 1| Android Development
-Member 2| AI and Backend Development
-Member 3| UI/UX, Integration and Testing
-
-Update this section with actual team members and their GitHub profiles.
+Hitika Dhiman- hitika567-oss| UI/UX Integration and testing 
+Harshita- harshitaydv7654-hub| Android Development
+Sanskriti- sanskritisahu04-dot| AI and Backend Development
+Ruhani- ruhanighai | AI and Backend Development 
 
 🧪 Testing
 
@@ -366,10 +301,6 @@ Testing will cover:
 - Response latency.
 - AI uncertainty and incorrect predictions.
 - Accessibility and TalkBack usability.
-
-Performance and accuracy claims will be reported only after actual testing.
-
-⚠️ Limitations and Safety Disclaimer
 
 Drishti is an assistive AI prototype.
 
@@ -389,29 +320,11 @@ Contributions, ideas and suggestions are welcome.
 4. Test your implementation.
 5. Submit a pull request.
 
-Example:
-
-git checkout -b feature/voice-assistant
-
-git add .
-
-git commit -m "Add voice assistant functionality"
-
-git push origin feature/voice-assistant
-
 📌 Future Vision
 
 Our long-term goal is to evolve Drishti into a reliable, affordable and accessible visual assistant that works directly on compatible smartphones.
 
 We aim to explore on-device AI, better object localisation, multilingual voice interaction and more comprehensive accessibility features.
-
-📜 License
-
-This project is intended for educational and hackathon development.
-
-A license will be added after the team decides on the appropriate distribution terms.
-
----
 
 <p align="center">
 
